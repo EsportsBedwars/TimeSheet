@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypixel TimeSheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hypixel TimeSheet</h1>
+        <form id="timesheetForm">
+            <section class="section">
+                <h2>Employee Details</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="empID">Employee ID/Number:</label>
+                <input type="text" id="empID" required>
+                <label for="department">Department/Team:</label>
+                <input type="text" id="department" required>
+                <label for="position">Position/Role:</label>
+                <input type="text" id="position" required>
+            </section>
+
+            <section class="section">
+                <h2>Time Period</h2>
+                <label for="timePeriod">Dates Covered:</label>
+                <select id="timePeriod">
+                    <option value="weekly">Weekly</option>
+                    <option value="bi-weekly">Bi-Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+                <label for="startDate">Period Start Date:</label>
+                <input type="date" id="startDate" required>
+                <label for="endDate">Period End Date:</label>
+                <input type="date" id="endDate" required>
+            </section>
+
+            <section class="section">
+                <h2>Work Hours</h2>
+                <table id="workHoursTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Break Time (hours)</th>
+                            <th>Total Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="date" name="date[]"></td>
+                            <td><input type="time" name="startTime[]"></td>
+                            <td><input type="time" name="endTime[]"></td>
+                            <td><input type="number" name="breakTime[]" step="0.1"></td>
+                            <td><input type="number" name="totalHours[]" step="0.1" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" id="addRow">Add Row</button>
+            </section>
+
+            <section class="section">
+                <h2>Project or Task Codes</h2>
+                <label for="projectCodes">Codes/Descriptions:</label>
+                <textarea id="projectCodes" rows="4"></textarea>
+            </section>
+
+            <button type="button" id="downloadCSV">Download CSV</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

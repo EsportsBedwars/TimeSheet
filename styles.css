@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+.container {
+    background: white;
+    padding: 2px; /* Minimized padding */
+    border-radius: 4px; /* Reduced border radius */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Further reduced box shadow */
+    width: 100%;
+    max-width: 480px; /* Further reduced max-width */
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1rem; /* Further reduced font size */
+    font-weight: bold;
+    color: #007bff;
+    margin: 2px 0; /* Minimized margin */
+    word-break: break-word;
+}
+
+.section {
+    margin-bottom: 1px; /* Further reduced spacing */
+}
+
+label {
+    display: block;
+    margin-bottom: 1px; /* Minimized margin */
+    font-weight: bold;
+    font-size: 0.8rem; /* Further reduced font size for labels */
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 1px; /* Minimized padding */
+    margin-bottom: 2px; /* Minimized margin */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 4px; /* Reduced margin */
+    font-size: 0.55rem; /* Further reduced font size */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 1px; /* Minimized padding */
+    text-align: left;
+    word-break: break-word;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 1px 2px; /* Minimized padding */
+    font-size: 0.55rem; /* Adjusted font size */
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 2px; /* Minimal padding */
+    }
+
+    h1 {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .section {
+        margin-bottom: 1px; /* Minimized margin */
+    }
+
+    table {
+        font-size: 0.5rem; /* Smaller font size for tables */
+    }
+
+    button {
+        font-size: 0.5rem;
+        padding: 1px 2px; /* Adjusted padding */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 0.8rem; /* Further reduced font size */
+    }
+    
+    .container {
+        padding: 1px; /* Minimal padding */
+    }
+}
